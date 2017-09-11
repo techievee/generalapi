@@ -5,23 +5,22 @@
                         <span class="pull-right text-muted small"><span class="label label-success"><em>Dynamic PPL'N'S</em></span>
                             <a href="http://give-me-coins.com/support/faq/what-is-pplns/" target="_blank"><i class="fa fa-question fa-fw"></i></a>
                         </span>
-                        
                     </a>
                      <a  class="list-group-item">
                         <i class="fa fa-thermometer-full fa-fw"></i> Current round 'N' Value 
-                        <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_ubiq.stats.lastNValue}}</em></span>                           
+                        <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_exp.stats.lastNValue}}</em></span>                           
                         </span>
                     </a>
 
                     <a class="list-group-item">
                         <i class="fa fa-thermometer-empty fa-fw"></i> Buffered 'N' 
-                        <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_ubiq.stats.nShares}}</em></span>                           
+                        <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_exp.stats.nShares}}</em></span>                           
                         </span>
                     </a>
 
                     <a class="list-group-item">
                         <i class="fa fa-money fa-fw"></i> Pool Fee
-                        <span class="pull-right text-muted small"><em>{{config_ubiq.PoolFee}}</em>
+                        <span class="pull-right text-muted small"><em>{{config_exp.PoolFee}}</em>
                         </span>
                     </a>
 
@@ -33,34 +32,34 @@
 
                     <a class="list-group-item">
                         <i class="fa fa-unlock-alt fa-fw"></i> Network Difficulty
-                        <span class="pull-right text-muted small"><em>{{with-metric-prefix difficulty_ubiq}}</em>
+                        <span class="pull-right text-muted small"><em>{{with-metric-prefix difficulty_exp}}</em>
                         </span>
                     </a>
 
                     <a class="list-group-item">
                         <i class="fa fa-dashboard fa-fw"></i> Network Hashrate
-                        <span class="pull-right text-muted small"><em>{{format-hashrate model.model_ubiq.hashrate}}</em>
+                        <span class="pull-right text-muted small"><em>{{format-hashrate model.model_exp.hashrate}}</em>
                         </span>
                     </a>
 
                     <a class="list-group-item">
                         <i class="fa fa-sort-amount-asc fa-fw"></i> Blockchain Height
-                        <span class="pull-right text-muted small"><em>{{format-number height_ubiq}}</em>
+                        <span class="pull-right text-muted small"><em>{{format-number height_exp}}</em>
                         </span>
                     </a>
 
                      <a class="list-group-item">
                         <i class="fa fa-ticket fa-fw"></i> Payment Threshold
-                        <span class="pull-right text-muted small"><em>{{config_ubiq.PayoutThreshold}} {{config_ubiq.CoinShortName}} </em>
+                        <span class="pull-right text-muted small"><em>{{config_exp.PayoutThreshold}} {{config_exp.CoinShortName}} </em>
                         </span>
                     </a>
 
                     <a class="list-group-item bg-graygradient text-justify">
-                        EthDcrMiner64.exe -epool {{config_ubiq.StratumHost}}:{{config_ubiq.StratumPort}} -ewal <span class="text-muted small"><em>{{config_ubiq.CoinName}}Address</em></span> -eworker <span class="text-muted small"><em>WORKERNAME</em></span> -allcoins 1
+                        EthDcrMiner64.exe -epool {{config_exp.StratumHost}}:{{config_exp.StratumPort}} -ewal <span class="text-muted small"><em>{{config_exp.CoinName}}Address</em></span> -eworker <span class="text-muted small"><em>WORKERNAME</em></span> -allcoins 1
                     </a>
 
 
-                    <a class="list-group-item bg-ubiqgreen text-center" href="https://{{config_ubiq.WebsiteName}}" target="_blank">                      
+                    <a class="list-group-item bg-expanseblue text-center" href="https://{{config_exp.WebsiteName}}" target="_blank">                      
                         <button style="btn-success"> VISIT POOL</button>
                     </a>
 

@@ -39,81 +39,10 @@
                 </div>
                 <!-- /.panel-heading -->
 
-                <div class="list-group">
-                    <a  class="list-group-item">
-                        <i class="fa fa-trophy fa-fw"></i> Rewards System
-                        <span class="pull-right text-muted small"><span class="label label-success"><em>Dynamic PPL'N'S</em></span>
-                            <a href="http://give-me-coins.com/support/faq/what-is-pplns/" target="_blank"><i class="fa fa-question fa-fw"></i></a>
-                        </span>
-                    </a>
-                     <a  class="list-group-item">
-                        <i class="fa fa-thermometer-full fa-fw"></i> 'N' Value for the current round
-                        <span class="pull-right text-muted small"><span class="label label-success"><em>{{ model.model_ubiq.exchangedata.24h_volume_inr }}</em></span>                           
-                        </span>
-                    </a>
-                     <a class="list-group-item">
-                        <i class="fa fa-thermometer-empty fa-fw"></i> 'N' shares buffered
-                        <span class="pull-right text-muted small"><span class="label label-success"><em></em></span>                           
-                        </span>
-                    </a>
-                    
-<!--                     <a class="list-group-item">
-                        <div class="progress" style="margin:0px;height:20px;">
-                            <span class="text-center text-aqua bold" style="margin-top:10px;">
-                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuemax="1585" style="width:60%">    
-                            
-                        </div></span>
-                         
-                    </div>
-                    </a>-->
-                    
-                    
-                    <a class="list-group-item">
-                        <i class="fa fa-money fa-fw"></i> Pool Fee
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                     <a class="list-group-item">
-                        <i class="fa fa-sitemap fa-fw"></i> Share Difficulty
-                        <span class="pull-right text-muted small"><span class="label label-success"><em>4G</em></span>
-                        </span>
-                    </a>
-                    <a class="list-group-item">
-                        <i class="fa fa-unlock-alt fa-fw"></i> Network Difficulty
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                    <a class="list-group-item">
-                        <i class="fa fa-dashboard fa-fw"></i> Network Hashrate
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                    <a class="list-group-item">
-                        <i class="fa fa-sort-amount-asc fa-fw"></i> Blockchain Height
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                    <a  class="list-group-item">
-                        <i class="fa fa-clock-o fa-fw"></i> Current Round Variance
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                    <a class="list-group-item">
-                        <i class="fa fa-ticket fa-fw"></i> Payment Threshold
-                        <span class="pull-right text-muted small"><em> </em>
-                        </span>
-                    </a>
-                    <a  class="list-group-item">
-                        <i class="fa fa-money fa-fw"></i> Payout
-                        <span class="pull-right text-muted small"><em></em>
-                        </span>
-                    </a>
-                    <a class="list-group-item">
-                        <i class="fa fa-credit-card-alt fa-fw"></i> 
-                        <span class="pull-right text-muted small text-blue">≅ <em>
-                          </em>
-                        </span><br/><span class="text-muted small text-blue"><em></em></span>
-                    </a>
+               <div class="list-group">
+
+                {{ partial "index/data_exp" }}
+               
                 </div>
                 <!-- /.list-group -->
 
