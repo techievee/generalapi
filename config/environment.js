@@ -13,10 +13,11 @@ module.exports = function (environment) {
             }
         },
 
-        APP: {
+        APP: {           
+            
              EXP: {
                     // API host and port
-                    ApiUrl: 'https://exp.daggerpool.com/',
+                    ApiUrl: '//exp.daggerpool.com/',
 
                     // HTTP mining endpoint
                     HttpHost: 'http://exp-us01.daggerpool.com',
