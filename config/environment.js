@@ -14,12 +14,12 @@ module.exports = function (environment) {
         },
 
         APP: {
-            WebsiteName : 'daggerpool.com',
-            Currency : 'USD',
+            WebsiteName : 'miningpoolindia.com',
+            Currency : 'INR',
             
              EXP: {
                     // API host and port
-                    ApiUrl: '//exp.daggerpool.com/',
+                    ApiUrl: '//exp.miningpoolindia.com/',
 
                     // HTTP mining endpoint
                     HttpHost: 'http://exp-us01.daggerpool.com',
