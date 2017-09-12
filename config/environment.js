@@ -13,7 +13,9 @@ module.exports = function (environment) {
             }
         },
 
-        APP: {           
+        APP: {
+            WebsiteName : 'daggerpool.com',
+            Currency : 'USD',
             
              EXP: {
                     // API host and port
