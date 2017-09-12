@@ -18,96 +18,96 @@ module.exports = function (environment) {
             Currency : 'INR',
             
              EXP: {
-                    // API host and port
-                    ApiUrl: '//exp.miningpoolindia.com/',
+                     // API host and port
+            ApiUrl: '//exp.daggerpool.com/',
 
-                    // HTTP mining endpoint
-                    HttpHost: 'http://exp-us01.daggerpool.com',
-                    HttpPort: 9999,            
+            // HTTP mining endpoint
+            HttpHost: 'http://exp01.miningpoolindia.com',
+            HttpPort: 9999,            
 
-                    // Stratum mining endpoint
-                    StratumHost: 'exp-us01.daggerpool.com',
-                    StratumPort: 9009,
+            // Stratum mining endpoint
+            StratumHost: 'exp01.miningpoolindia.com',
+            StratumPort: 9009,
 
-                    StratumHost1: 'exp-us02.daggerpool.com',
-                    StratumPort1: 9009,
+            StratumHost1: 'exp02.miningpoolindia.com',
+            StratumPort1: 9009,
+            
+            StratumHost2: 'exp01.miningpoolindia.com',
+            StratumPort2: 9009,
 
-                    StratumHost2: 'exp-uk01.daggerpool.com',
-                    StratumPort2: 9009,
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4G',
+            
+            //Current and Localization
+            Currency: 'INR',
+            CoinName: 'Expanse',
+            CoinShortName: 'EXP',
+            PaymentText: 'twice in a day',
+            SupportMail: 'helpdesk@miningpoolindia.com',
+            SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
+            WebsiteName: 'exp.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'http://www.gander.tech/address/',
+            TransactionAddress : 'http://www.gander.tech/tx/',
+            UncleAddress : 'http://www.gander.tech/uncle/',
+            BlockAddress : 'http://www.gander.tech/tx/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
 
-                    // Fee and payout details
-                    PoolFee: '0%',
-                    PayoutThreshold: '0.5',
-                    ShareDifficulty: '4G',
-
-                    //Current and Localization
-                    Currency: 'USD',
-                    CoinName: 'Expanse',
-                    CoinShortName: 'EXP',
-                    PaymentText: 'twice in a day',
-                    SupportMail: 'helpdesk@daggerpool.com',
-                    SupportHelpdesk: 'http://helpdesk.daggerpool.com',
-                    WebsiteName: 'exp.daggerpool.com',
-
-                    //Coin Bases Settings
-                    ChainAddress : 'http://www.gander.tech/address/',
-                    TransactionAddress : 'http://www.gander.tech/tx/',
-                    UncleAddress : 'http://www.gander.tech/uncle/',
-                    BlockAddress : 'http://www.gander.tech/tx/',
-
-                    //Twitter Parameter
-                    TwitterURL: 'https://twitter.com/',
-                    TwitterHash: 'daggerpool_com',
-
-
-                    // For network hashrate (change for your favourite fork)
-                    BlockTime: 14.4
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 14.4
              },
              UBIQ: {
-                     // API host and port
-                    ApiUrl: '//ubiq.daggerpool.com/',
+                   // API host and port
+            ApiUrl: '//ubiq.miningpoolindia.com/',
 
-                    // HTTP mining endpoint
-                    HttpHost: 'http://ubiq-us01.daggerpool.com',
-                    HttpPort: 8888,            
+            // HTTP mining endpoint
+            HttpHost: 'http://ubiq01.miningpoolindia.com',
+            HttpPort: 8888,            
 
-                    // Stratum mining endpoint
-                    StratumHost: 'ubiq-us01.daggerpool.com',
-                    StratumPort: 8008,
+            // Stratum mining endpoint
+            StratumHost: 'ubiq01.miningpoolindia.com',
+            StratumPort: 8008,
 
-                    StratumHost1: 'ubiq-us02.daggerpool.com',
-                    StratumPort1: 8008,
+            StratumHost1: 'ubiq01.miningpoolindia.com',
+            StratumPort1: 8008,
+            
+            StratumHost2: 'ubiq02.miningpoolindia.com',
+            StratumPort2: 8008,
 
-                    StratumHost2: 'ubiq-uk01.daggerpool.com',
-                    StratumPort2: 8008,
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4G',
+            
+            //Current and Localization
+            Currency: 'INR',
+            CoinName: 'Ubiq',
+            CoinShortName: 'UBIQ',
+            PaymentText: 'twice in a day',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
+            WebsiteName: 'ubiq.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://ubiqscan.io/en/address/',
+            TransactionAddress : 'https://ubiqscan.io/en/tx/',
+            UncleAddress : 'https://ubiqscan.io/en/uncle/',
+            BlockAddress : 'https://ubiqscan.io/en/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'miningpoolindia',
+            
 
-                    // Fee and payout details
-                    PoolFee: '0%',
-                    PayoutThreshold: '0.5',
-                    ShareDifficulty: '4G',
-
-                    //Current and Localization
-                    Currency: 'USD',
-                    CoinName: 'Ubiq',
-                    CoinShortName: 'UBIQ',
-                    PaymentText: 'twice in a day',
-                    SupportMail: 'helpdesk@daggerpool.com',
-                    SupportHelpdesk: 'http://helpdesk.daggerpool.com',
-                    WebsiteName: 'ubiq.daggerpool.com',
-
-                    //Coin Bases Settings
-                    ChainAddress : 'https://ubiqscan.io/en/address/',
-                    TransactionAddress : 'https://ubiqscan.io/en/tx/',
-                    UncleAddress : 'https://ubiqscan.io/en/uncle/',
-                    BlockAddress : 'https://ubiqscan.io/en/block/',
-
-                    //Twitter Parameter
-                    TwitterURL: 'https://twitter.com/',
-                    TwitterHash: 'daggerpool_com',
-
-
-                    // For network hashrate (change for your favourite fork)
-                    BlockTime: 14.4
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 14.4
              }
              
 
