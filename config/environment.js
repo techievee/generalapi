@@ -36,7 +36,7 @@ module.exports = function (environment) {
                     StratumPort2: 9009,
 
                     // Fee and payout details
-                    PoolFee: '0%',
+                    PoolFee: '0.25%',
                     PayoutThreshold: '0.5',
                     ShareDifficulty: '4G',
 
