@@ -108,7 +108,55 @@ module.exports = function (environment) {
 
                     // For network hashrate (change for your favourite fork)
                     BlockTime: 14.4
-             }
+             },
+        DBIX: {
+            // API host and port
+            ApiUrl: '//dbix.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://dbix-us01.daggerpool.com',
+            HttpPort: 7777,            
+
+            // Stratum mining endpoint
+            StratumHost: 'dbix-us01.daggerpool.com',
+            StratumPort: 7007,
+
+            StratumHost1: 'dbix-uk01.daggerpool.com',
+            StratumPort1: 7007,
+            
+            NicehashHost: 'dbix-us01.daggerpool.com',
+            NicehashPost: 7079,
+
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'Dubai Coin',
+            CoinShortName: 'DBIX',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'dbix.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'http://dbixscan.io/addr/',
+	    TransactionAddress : 'http://dbixscan.io/tx/',
+            UncleAddress : 'http://dbixscan.io/uncle/',
+            BlockAddress : 'http://dbixscan.io/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 14.4
+
+
+        }
              
 
 
@@ -121,6 +169,7 @@ module.exports = function (environment) {
          */
         ENV.APP.EXP.ApiUrl = 'https://exp.daggerpool.com/'
         ENV.APP.UBIQ.ApiUrl = 'https://ubiq.daggerpool.com/'
+        ENV.APP.DBIX.ApiUrl = 'https://dbix.daggerpool.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
