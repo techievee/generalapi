@@ -185,6 +185,97 @@ export default Ember.Controller.extend({
             var epochOffset = (30000 - (this.getWithDefault('height_exp', 1) % 30000)) * 1000 * this.get('config_exp').BlockTime;
             return Date.now() + epochOffset;
         }
+    }),
+     get config_dbix() {
+        return config.APP.DBIX  ;
+    },
+
+    height_dbix: Ember.computed('model.model_dbix.nodes', {
+        get() {
+            var node = this.get('bestNode_dbix');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_dbix: Ember.computed('model.model_dbix.stats', {
+        get() {
+            return parseInt(this.get('model.model_dbix.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_dbix: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_dbix.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_dbix: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_dbix.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_dbix: Ember.computed('model.model_dbix.nodes', {
+        get() {
+            var node = this.get('bestNode_dbix');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_dbix: Ember.computed('difficulty_dbix', {
+        get() {
+            return this.getWithDefault('difficulty_dbix', 0) / config.APP.DBIX.BlockTime;
+        }
+    }),
+
+    immatureTotal_dbix: Ember.computed('model.model_dbix', {
+        get() {
+            return this.getWithDefault('model.model_dbix.immatureTotal', 0) + this.getWithDefault('model.model_dbix.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_dbix: Ember.computed('model.model_dbix.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_dbix.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_dbix: Ember.computed('model.model_dbix.', {
+        get() {
+            return parseInt(this.get('model.model_dbix.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_dbix: Ember.computed('model.model_dbix.', {
+        get() {
+            var percent = (this.get('model.model_dbix.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_dbix: Ember.computed('height_dbix', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_dbix', 1) % 30000)) * 1000 * this.get('config_dbix').BlockTime;
+            return Date.now() + epochOffset;
+        }
     })
    
     
