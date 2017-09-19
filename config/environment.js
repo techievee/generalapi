@@ -156,6 +156,54 @@ module.exports = function (environment) {
             BlockTime: 14.4
 
 
+        },
+        MUSIC:  {
+            // API host and port
+            ApiUrl: '//music.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://mc-us01.daggerpool.com',
+            HttpPort: 6666,            
+
+            // Stratum mining endpoint
+            StratumHost: 'mc-us01.daggerpool.com',
+            StratumPort: 6006,
+
+            StratumHost1: 'mc-uk01.daggerpool.com',
+            StratumPort1: 6006,
+            
+            NicehashHost: 'dbix-us01.daggerpool.com',
+            NicehashPost: 6069,
+
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '10',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'Music Coin',
+            CoinShortName: 'MUSIC',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'music.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://orbiter.musicoin.org/addr/',
+	    TransactionAddress : 'https://orbiter.musicoin.org/tx/',
+            UncleAddress : 'https://orbiter.musicoin.org/uncle/',
+            BlockAddress : 'https://orbiter.musicoin.org/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 14.4
+
+
         }
              
 
