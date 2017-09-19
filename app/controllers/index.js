@@ -276,6 +276,97 @@ export default Ember.Controller.extend({
             var epochOffset = (30000 - (this.getWithDefault('height_dbix', 1) % 30000)) * 1000 * this.get('config_dbix').BlockTime;
             return Date.now() + epochOffset;
         }
+    }),
+    get config_music() {
+        return config.APP.MUSIC  ;
+    },
+
+    height_music: Ember.computed('model.model_music.nodes', {
+        get() {
+            var node = this.get('bestNode_music');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_music: Ember.computed('model.model_music.stats', {
+        get() {
+            return parseInt(this.get('model.model_music.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_music: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_music.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_music: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_music.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_music: Ember.computed('model.model_music.nodes', {
+        get() {
+            var node = this.get('bestNode_music');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_music: Ember.computed('difficulty_music', {
+        get() {
+            return this.getWithDefault('difficulty_music', 0) / config.APP.MUSIC.BlockTime;
+        }
+    }),
+
+    immatureTotal_music: Ember.computed('model.model_music', {
+        get() {
+            return this.getWithDefault('model.model_music.immatureTotal', 0) + this.getWithDefault('model.model_music.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_music: Ember.computed('model.model_music.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_music.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_music: Ember.computed('model.model_music.', {
+        get() {
+            return parseInt(this.get('model.model_music.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_music: Ember.computed('model.model_music.', {
+        get() {
+            var percent = (this.get('model.model_music.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_music: Ember.computed('height_music', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_music', 1) % 30000)) * 1000 * this.get('config_music').BlockTime;
+            return Date.now() + epochOffset;
+        }
     })
    
     
