@@ -161,20 +161,21 @@ module.exports = function (environment) {
         },
         MUSIC: {
             // API host and port
-            ApiUrl: '//music.daggerpool.com/',
+            ApiUrl: '//music.miningpoolindia.com/',
 
             // HTTP mining endpoint
-            HttpHost: 'http://mc-us01.daggerpool.com',
+            HttpHost: 'http://mc01.miningpoolindia.com',
             HttpPort: 6666,            
 
             // Stratum mining endpoint
-            StratumHost: 'mc-us01.daggerpool.com',
+            StratumHost: 'mc01.miningpoolindia.com',
             StratumPort: 6006,
 
-            StratumHost1: 'mc-uk01.daggerpool.com',
+            StratumHost1: 'mc02.miningpoolindia.com',
             StratumPort1: 6006,
             
-            NicehashHost: 'mc-us01.daggerpool.com',
+            
+            NicehashHost: 'mc01.miningpoolindia.com',
             NicehashPost: 6069,
 
             // Fee and payout details
@@ -183,23 +184,24 @@ module.exports = function (environment) {
             ShareDifficulty: '4000000000',
             
             //Current and Localization
-            Currency: 'USD',
+            Currency: 'INR',
             CoinName: 'Music Coin',
             CoinShortName: 'MUSIC',
             PaymentText: 'every 2 hours',
-            SupportMail: 'helpdesk@daggerpool.com',
-            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
-            WebsiteName: 'music.daggerpool.com',
+            SupportMail: 'helpdesk@miningpoolindia.com',
+            SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
+            WebsiteName: 'music.miningpoolindia.com',
             
-            //Coin Bases Settings
+              //Coin Bases Settings
             ChainAddress : 'https://orbiter.musicoin.org/addr/',
 	    TransactionAddress : 'https://orbiter.musicoin.org/tx/',
             UncleAddress : 'https://orbiter.musicoin.org/uncle/',
             BlockAddress : 'https://orbiter.musicoin.org/block/',
             
+            
             //Twitter Parameter
             TwitterURL: 'https://twitter.com/',
-            TwitterHash: 'daggerpool_com',
+            TwitterHash: 'miningpoolindia',
             
 
             // For network hashrate (change for your favourite fork)
