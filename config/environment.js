@@ -195,6 +195,7 @@ module.exports = function (environment) {
             UncleAddress : 'https://orbiter.musicoin.org/uncle/',
             BlockAddress : 'https://orbiter.musicoin.org/block/',
             
+            
             //Twitter Parameter
             TwitterURL: 'https://twitter.com/',
             TwitterHash: 'daggerpool_com',
@@ -218,6 +219,7 @@ module.exports = function (environment) {
         ENV.APP.EXP.ApiUrl = 'https://exp.daggerpool.com/'
         ENV.APP.UBIQ.ApiUrl = 'https://ubiq.daggerpool.com/'
         ENV.APP.DBIX.ApiUrl = 'https://dbix.daggerpool.com/'
+        ENV.APP.MUSIC.ApiUrl = 'https://music.daggerpool.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
