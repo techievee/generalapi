@@ -19,7 +19,7 @@ module.exports = function (environment) {
             
              EXP: {
                      // API host and port
-            ApiUrl: '//exp.daggerpool.com/',
+            ApiUrl: '//exp.miningpoolindia.com/',
 
             // HTTP mining endpoint
             HttpHost: 'http://exp01.miningpoolindia.com',
@@ -47,7 +47,7 @@ module.exports = function (environment) {
             PaymentText: 'twice in a day',
             SupportMail: 'helpdesk@miningpoolindia.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
-            WebsiteName: 'exp.daggerpool.com',
+            WebsiteName: 'exp.miningpoolindia.com',
             
             //Coin Bases Settings
             ChainAddress : 'http://www.gander.tech/address/',
@@ -93,7 +93,7 @@ module.exports = function (environment) {
             PaymentText: 'twice in a day',
             SupportMail: 'helpdesk@daggerpool.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
-            WebsiteName: 'ubiq.daggerpool.com',
+            WebsiteName: 'ubiq.miningpoolindia.com',
             
             //Coin Bases Settings
             ChainAddress : 'https://ubiqscan.io/en/address/',
