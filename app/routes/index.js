@@ -30,7 +30,7 @@ export default Ember.Route.extend({
             return Ember.Object.create(data);
         
         }),
-        model_eth:Ember.$.getJSON(url_music).then(function (data) {
+        model_eth:Ember.$.getJSON(url_eth).then(function (data) {
             return Ember.Object.create(data);
         
         })

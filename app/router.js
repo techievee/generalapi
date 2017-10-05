@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('not-found');      
   this.route('about');   
-  this.route('helpdesk', { path: 'http://helpdesk.miningpoolindia.com' });
+  this.route('helpdesk', { path: 'http://helpdesk.daggerpool.com' });
 });
 
 export default Router;
