@@ -1,0 +1,106 @@
+<a  class="list-group-item">
+    <i class="fa fa-dashboard fa-fw"></i> Pool Hashrate
+    <span class="pull-right text-blue" style="font-family: 'Audiowide', sans-serif;"><bold>{{format-hashrate model.model_eth.hashrate}}</bold>
+    </span>
+
+</a>
+
+<a  class="list-group-item">
+    <i class="fa fa-users fa-fw"></i> Active Miners
+    <span class="pull-right text-blue" style="font-family: 'Audiowide', sans-serif;"><bold>{{format-number model.model_eth.minersTotal}}</bold>
+    </span>
+
+</a>
+
+<a  class="list-group-item">
+    <i class="fa fa-cubes fa-fw"></i> last Block
+    <span class="pull-right text-blue" style="font-family: 'Merriweather+Sans', sans-serif;"><bold>
+            {{#if model.model_eth.stats.lastBlockFound}}
+            <i class="fa fa-clock-o"></i><span> {{format-relative (seconds-to-ms model.model_eth.stats.lastBlockFound)}}</span>
+            {{else}}
+            -
+            {{/if}} </bold>
+    </span>
+
+</a>
+
+<a  class="list-group-item">
+    <i class="fa fa-trophy fa-fw"></i> Payout 
+    <span class="pull-right text-muted small"><span class="label label-success"><em>DPPLNS</em></span>
+        <a href="http://give-me-coins.com/support/faq/what-is-pplns/" target="_blank"><i class="fa fa-question fa-fw"></i></a>
+    </span>
+
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-credit-card-alt fa-fw"></i> {{config_eth.CoinShortName}}-{{config_eth.Currency}}
+    <span class="pull-right text-red" style="font-family: 'Merriweather+Sans', sans-serif;"><bold>≅ 
+            {{#if (eq config_eth.Currency 'USD') }}
+            {{format-number  model.model_eth.exchangedata.price_usd style='currency' currency='USD'}}
+            {{else}}
+            {{format-number  model.model_eth.exchangedata.price_inr style='currency' currency='INR'}}
+            {{/if}}
+        </bold>
+    </span>
+</a>
+
+
+<a  class="list-group-item">
+    <i class="fa fa-thermometer-full fa-fw"></i> Current round 'N' Value 
+    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_eth.stats.lastNValue}}</em></span>                           
+    </span>
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-thermometer-empty fa-fw"></i> Buffered 'N' 
+    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-number model.model_eth.stats.nShares}}</em></span>                           
+    </span>
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-money fa-fw"></i> Pool Fee
+    <span class="pull-right text-muted small"><em>{{config_eth.PoolFee}}</em>
+    </span>
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-sitemap fa-fw"></i> Share Difficulty
+    <span class="pull-right text-muted small"><span class="label label-success"><em>{{format-hashrate 4000000000}}</em></span>
+    </span>
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-unlock-alt fa-fw"></i> Network Difficulty
+    <span class="pull-right text-muted small"><em>{{with-metric-prefix difficulty_eth}}</em>
+    </span>
+</a>
+
+
+<a class="list-group-item">
+    <i class="fa fa-sort-amount-asc fa-fw"></i> Blockchain Height
+    <span class="pull-right text-muted small"><em>{{format-number height_eth}}</em>
+    </span>
+</a>
+
+<a class="list-group-item">
+    <i class="fa fa-ticket fa-fw"></i> Payment Threshold
+    <span class="pull-right text-muted small"><em>{{config_eth.PayoutThreshold}} {{config_eth.CoinShortName}} </em>
+    </span>
+</a>
+
+<a class="list-group-item bg-graygradient text-justify">
+    EthDcrMiner64.exe -epool <span style="white-space:nowrap;" class="text-muted small text-blue"><em>{{config_eth.StratumHost}}:{{config_eth.StratumPort}}</em></span> -ewal <span class="text-muted small text-blue"><em>{{config_eth.CoinName}}Address</em></span> -eworker <span class="text-muted small text-blue"><em>WORKERNAME</em></span> -allcoins 1
+</a>
+
+
+<a class="list-group-item bg-ethgray text-center" href="https://{{config_eth.WebsiteName}}" target="_blank">                      
+    <button style="btn-success"> VISIT POOL</button>
+</a>
+
+
+
+
+
+
+
+

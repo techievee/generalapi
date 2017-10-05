@@ -1387,6 +1387,15 @@ background: linear-gradient(to right, rgba(0,36,0,1) 0%,rgba(0,87,0,1) 46%,rgba(
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002400', endColorstr='#b4ddb4',GradientType=1 ); /* IE6-8 */ /* IE6-8 fallback on horizontal gradient */
 }
 
+.bg-ethgray {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#83bce2+28,f2f6f8+51,f2f6f8+51,83bce2+73,83bce2+73,90b7ce+100,e0eff9+100,3b96cc+100 */
+background: #83bce2; /* Old browsers */
+background: -moz-linear-gradient(left, #83bce2 28%, #f2f6f8 51%, #f2f6f8 51%, #83bce2 73%, #83bce2 73%, #90b7ce 100%, #e0eff9 100%, #3b96cc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #83bce2 28%,#f2f6f8 51%,#f2f6f8 51%,#83bce2 73%,#83bce2 73%,#90b7ce 100%,#e0eff9 100%,#3b96cc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #83bce2 28%,#f2f6f8 51%,#f2f6f8 51%,#83bce2 73%,#83bce2 73%,#90b7ce 100%,#e0eff9 100%,#3b96cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83bce2', endColorstr='#3b96cc',GradientType=1 ); /* IE6-9 */
+}
+
 .bg-expanseblue {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100&1+0,1+35,0.7+68,0+100;Blue+to+Transparent+Sharp */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */

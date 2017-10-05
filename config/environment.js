@@ -208,6 +208,55 @@ module.exports = function (environment) {
             BlockTime: 14.4
 
 
+        },
+        ETH: {
+            // API host and port
+            ApiUrl: '//eth.miningpoolindia.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://eth01.miningpoolindia.com',
+            HttpPort: 8888,            
+
+            // Stratum mining endpoint
+            StratumHost: 'eth01.miningpoolindia.com',
+            StratumPort: 8008,
+
+            StratumHost1: 'eth02.miningpoolindia.com',
+            StratumPort1: 8008,
+            
+            
+            NicehashHost: 'eth01.miningpoolindia.com',
+            NicehashPost: 8089,
+
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '0.1',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'INR',
+            CoinName: 'Ethereum',
+            CoinShortName: 'ETH',
+            PaymentText: 'Every 2 hours',
+            SupportMail: 'helpdesk@miningpoolindia.com',
+            SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
+            WebsiteName: 'eth.miningpoolindia.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://etherscan.io/address/',
+	    TransactionAddress : 'https://etherscan.io/tx/',
+            UncleAddress : 'https://etherscan.io/uncle/',
+            BlockAddress : 'https://etherscan.io/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'miningpoolindia',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 15
+
+
         }
              
 
@@ -223,6 +272,7 @@ module.exports = function (environment) {
         ENV.APP.UBIQ.ApiUrl = 'https://ubiq.miningpoolindia.com/'
         ENV.APP.DBIX.ApiUrl = 'https://dbix.miningpoolindia.com/'
         ENV.APP.MUSIC.ApiUrl = 'https://music.miningpoolindia.com/'
+        ENV.APP.ETH.ApiUrl = 'https://eth.miningpoolindia.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
