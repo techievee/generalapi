@@ -153,7 +153,7 @@ module.exports = function (environment) {
             
 
             // For network hashrate (change for your favourite fork)
-            BlockTime: 14.4
+            BlockTime: 90
 
 
         },
@@ -205,6 +205,54 @@ module.exports = function (environment) {
             BlockTime: 14.4
 
 
+        },
+        ETH: {
+            // API host and port
+            ApiUrl: '//eth.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://eth-us01.daggerpool.com',
+            HttpPort: 8888,            
+
+            // Stratum mining endpoint
+            StratumHost: 'eth-us01.daggerpool.com',
+            StratumPort: 8008,
+
+            StratumHost1: 'eth-uk01.daggerpool.com',
+            StratumPort1: 8008,
+            
+            NicehashHost: 'eth-us01.daggerpool.com',
+            NicehashPost: 8089,
+
+            // Fee and payout details
+            PoolFee: '0%',
+            PayoutThreshold: '0.1',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'Ethereum',
+            CoinShortName: 'ETH',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'eth.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://etherscan.io/address/',
+	    TransactionAddress : 'https://etherscan.io/tx/',
+            UncleAddress : 'https://etherscan.io/uncle/',
+            BlockAddress : 'https://etherscan.io/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 15
+
+
         }
              
 
@@ -220,6 +268,7 @@ module.exports = function (environment) {
         ENV.APP.UBIQ.ApiUrl = 'https://ubiq.daggerpool.com/'
         ENV.APP.DBIX.ApiUrl = 'https://dbix.daggerpool.com/'
         ENV.APP.MUSIC.ApiUrl = 'https://music.daggerpool.com/'
+        ENV.APP.ETH.ApiUrl = 'https://eth.daggerpool.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;

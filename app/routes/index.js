@@ -12,6 +12,7 @@ export default Ember.Route.extend({
         var url_ubiq = config.APP.UBIQ.ApiUrl + 'api/stats'; 
         var url_dbix = config.APP.DBIX.ApiUrl + 'api/stats'; 
         var url_music = config.APP.MUSIC.ApiUrl + 'api/stats'; 
+        var url_eth = config.APP.ETH.ApiUrl + 'api/stats'; 
         
       return RSVP.hash({
           model_ubiq:  Ember.$.getJSON(url_ubiq).then(function (data) {
@@ -26,6 +27,10 @@ export default Ember.Route.extend({
         
         }),
         model_music:Ember.$.getJSON(url_music).then(function (data) {
+            return Ember.Object.create(data);
+        
+        }),
+        model_eth:Ember.$.getJSON(url_music).then(function (data) {
             return Ember.Object.create(data);
         
         })
