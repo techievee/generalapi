@@ -36,7 +36,7 @@ module.exports = function (environment) {
             StratumPort2: 9009,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '0.5',
             ShareDifficulty: '4G',
             
@@ -44,7 +44,7 @@ module.exports = function (environment) {
             Currency: 'INR',
             CoinName: 'Expanse',
             CoinShortName: 'EXP',
-            PaymentText: 'twice in a day',
+            PaymentText: 'every 2 hours',
             SupportMail: 'helpdesk@miningpoolindia.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
             WebsiteName: 'exp.miningpoolindia.com',
@@ -82,7 +82,7 @@ module.exports = function (environment) {
             StratumPort2: 8008,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '0.5',
             ShareDifficulty: '4G',
             
@@ -90,7 +90,7 @@ module.exports = function (environment) {
             Currency: 'INR',
             CoinName: 'Ubiq',
             CoinShortName: 'UBIQ',
-            PaymentText: 'twice in a day',
+            PaymentText: 'every 2 hours',
             SupportMail: 'helpdesk@daggerpool.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
             WebsiteName: 'ubiq.miningpoolindia.com',
@@ -129,7 +129,7 @@ module.exports = function (environment) {
             NicehashPost: 7079,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '0.5',
             ShareDifficulty: '4000000000',
             
@@ -137,7 +137,7 @@ module.exports = function (environment) {
             Currency: 'INR',
             CoinName: 'Dubai Coin',
             CoinShortName: 'DBIX',
-            PaymentText: 'Every 2 hours',
+            PaymentText: 'every 2 hours',
             SupportMail: 'helpdesk@miningpoolindia.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
             WebsiteName: 'dbix.miningpoolindia.com',
@@ -155,7 +155,7 @@ module.exports = function (environment) {
             
 
             // For network hashrate (change for your favourite fork)
-            BlockTime: 14.4
+            BlockTime: 90
 
 
         },
@@ -179,7 +179,7 @@ module.exports = function (environment) {
             NicehashPost: 6069,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '10',
             ShareDifficulty: '4000000000',
             
@@ -229,15 +229,15 @@ module.exports = function (environment) {
             NicehashPost: 8089,
 
             // Fee and payout details
-            PoolFee: '0%',
-            PayoutThreshold: '0.1',
+            PoolFee: '0.9%',
+            PayoutThreshold: '0.01',
             ShareDifficulty: '4000000000',
             
             //Current and Localization
             Currency: 'INR',
             CoinName: 'Ethereum',
             CoinShortName: 'ETH',
-            PaymentText: 'Every 2 hours',
+            PaymentText: 'every 2 hours',
             SupportMail: 'helpdesk@miningpoolindia.com',
             SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
             WebsiteName: 'eth.miningpoolindia.com',
