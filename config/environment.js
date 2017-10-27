@@ -36,7 +36,7 @@ module.exports = function (environment) {
                     StratumPort2: 9009,
 
                     // Fee and payout details
-                    PoolFee: '0%',
+                    PoolFee: '0.5%',
                     PayoutThreshold: '0.5',
                     ShareDifficulty: '4G',
 
@@ -44,7 +44,7 @@ module.exports = function (environment) {
                     Currency: 'USD',
                     CoinName: 'Expanse',
                     CoinShortName: 'EXP',
-                    PaymentText: 'twice in a day',
+                    PaymentText: 'every 2 hours',
                     SupportMail: 'helpdesk@daggerpool.com',
                     SupportHelpdesk: 'http://helpdesk.daggerpool.com',
                     WebsiteName: 'exp.daggerpool.com',
@@ -61,7 +61,7 @@ module.exports = function (environment) {
 
 
                     // For network hashrate (change for your favourite fork)
-                    BlockTime: 14.4
+                    BlockTime: 30
              },
              UBIQ: {
                      // API host and port
@@ -82,7 +82,7 @@ module.exports = function (environment) {
                     StratumPort2: 8008,
 
                     // Fee and payout details
-                    PoolFee: '0%',
+                    PoolFee: '0.5%',
                     PayoutThreshold: '0.5',
                     ShareDifficulty: '4G',
 
@@ -90,7 +90,7 @@ module.exports = function (environment) {
                     Currency: 'USD',
                     CoinName: 'Ubiq',
                     CoinShortName: 'UBIQ',
-                    PaymentText: 'twice in a day',
+                    PaymentText: 'every 2 hours',
                     SupportMail: 'helpdesk@daggerpool.com',
                     SupportHelpdesk: 'http://helpdesk.daggerpool.com',
                     WebsiteName: 'ubiq.daggerpool.com',
@@ -128,7 +128,7 @@ module.exports = function (environment) {
             NicehashPost: 7079,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '0.5',
             ShareDifficulty: '4000000000',
             
@@ -176,7 +176,7 @@ module.exports = function (environment) {
             NicehashPost: 6069,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.5%',
             PayoutThreshold: '10',
             ShareDifficulty: '4000000000',
             
@@ -225,7 +225,7 @@ module.exports = function (environment) {
             NicehashPost: 8089,
 
             // Fee and payout details
-            PoolFee: '0%',
+            PoolFee: '0.9%',
             PayoutThreshold: '0.1',
             ShareDifficulty: '4000000000',
             
