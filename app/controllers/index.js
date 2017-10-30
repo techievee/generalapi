@@ -459,7 +459,288 @@ export default Ember.Controller.extend({
             var epochOffset = (30000 - (this.getWithDefault('height_eth', 1) % 30000)) * 1000 * this.get('config_eth').BlockTime;
             return Date.now() + epochOffset;
         }
+    }),
+    
+    get config_etc() {
+        return config.APP.ETC  ;
+    },
+
+    height_etc: Ember.computed('model.model_etc.nodes', {
+        get() {
+            var node = this.get('bestNode_etc');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_etc: Ember.computed('model.model_etc.stats', {
+        get() {
+            return parseInt(this.get('model.model_etc.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_etc: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_etc.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_etc: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_etc.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_etc: Ember.computed('model.model_etc.nodes', {
+        get() {
+            var node = this.get('bestNode_etc');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_etc: Ember.computed('difficulty_etc', {
+        get() {
+            return this.getWithDefault('difficulty_etc', 0) / config.APP.ETC.BlockTime;
+        }
+    }),
+
+    immatureTotal_etc: Ember.computed('model.model_etc', {
+        get() {
+            return this.getWithDefault('model.model_etc.immatureTotal', 0) + this.getWithDefault('model.model_etc.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_etc: Ember.computed('model.model_etc.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_etc.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_etc: Ember.computed('model.model_etc.', {
+        get() {
+            return parseInt(this.get('model.model_etc.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_etc: Ember.computed('model.model_etc.', {
+        get() {
+            var percent = (this.get('model.model_etc.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_etc: Ember.computed('height_etc', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_etc', 1) % 30000)) * 1000 * this.get('config_etc').BlockTime;
+            return Date.now() + epochOffset;
+        }
+    }),
+    
+    
+    get config_soil() {
+        return config.APP.SOIL  ;
+    },
+
+    height_soil: Ember.computed('model.model_soil.nodes', {
+        get() {
+            var node = this.get('bestNode_soil');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_soil: Ember.computed('model.model_soil.stats', {
+        get() {
+            return parseInt(this.get('model.model_soil.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_soil: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_soil.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_soil: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_soil.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_soil: Ember.computed('model.model_soil.nodes', {
+        get() {
+            var node = this.get('bestNode_soil');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_soil: Ember.computed('difficulty_soil', {
+        get() {
+            return this.getWithDefault('difficulty_soil', 0) / config.APP.SOIL.BlockTime;
+        }
+    }),
+
+    immatureTotal_soil: Ember.computed('model.model_soil', {
+        get() {
+            return this.getWithDefault('model.model_soil.immatureTotal', 0) + this.getWithDefault('model.model_soil.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_soil: Ember.computed('model.model_soil.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_soil.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_soil: Ember.computed('model.model_soil.', {
+        get() {
+            return parseInt(this.get('model.model_soil.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_soil: Ember.computed('model.model_soil.', {
+        get() {
+            var percent = (this.get('model.model_soil.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_soil: Ember.computed('height_soil', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_soil', 1) % 30000)) * 1000 * this.get('config_soil').BlockTime;
+            return Date.now() + epochOffset;
+        }
+    }),
+    
+    get config_ele() {
+        return config.APP.ELE  ;
+    },
+
+    height_ele: Ember.computed('model.model_ele.nodes', {
+        get() {
+            var node = this.get('bestNode_ele');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_ele: Ember.computed('model.model_ele.stats', {
+        get() {
+            return parseInt(this.get('model.model_ele.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_ele: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_ele.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_ele: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_ele.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_ele: Ember.computed('model.model_ele.nodes', {
+        get() {
+            var node = this.get('bestNode_ele');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_ele: Ember.computed('difficulty_ele', {
+        get() {
+            return this.getWithDefault('difficulty_ele', 0) / config.APP.ELE.BlockTime;
+        }
+    }),
+
+    immatureTotal_ele: Ember.computed('model.model_ele', {
+        get() {
+            return this.getWithDefault('model.model_ele.immatureTotal', 0) + this.getWithDefault('model.model_ele.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_ele: Ember.computed('model.model_ele.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_ele.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_ele: Ember.computed('model.model_ele.', {
+        get() {
+            return parseInt(this.get('model.model_ele.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_ele: Ember.computed('model.model_ele.', {
+        get() {
+            var percent = (this.get('model.model_ele.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_ele: Ember.computed('height_ele', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_ele', 1) % 30000)) * 1000 * this.get('config_ele').BlockTime;
+            return Date.now() + epochOffset;
+        }
     })
+    
+    
+    
+    
    
     
 });

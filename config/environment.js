@@ -253,6 +253,150 @@ module.exports = function (environment) {
             BlockTime: 15
 
 
+        },
+        ETC: {
+            // API host and port
+            ApiUrl: '//etc.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://etc-us01.daggerpool.com',
+            HttpPort: 9999,            
+
+            // Stratum mining endpoint
+            StratumHost: 'etc-us01.daggerpool.com',
+            StratumPort: 9009,
+
+            StratumHost1: 'etc-uk01.daggerpool.com',
+            StratumPort1: 9009,
+            
+            NicehashHost: 'etc-us01.daggerpool.com',
+            NicehashPost: 9099,
+
+            // Fee and payout details
+            PoolFee: '0.5%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'Ethereum Classic',
+            CoinShortName: 'ETC',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'etc.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://gastracker.io/addr/',
+	    TransactionAddress : 'https://gastracker.io/tx/',
+            UncleAddress : 'https://gastracker.io/uncle/',
+            BlockAddress : 'https://gastracker.io/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 15
+
+
+        },
+        SOIL: {
+            // API host and port
+            ApiUrl: '//soil.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://soil-us01.daggerpool.com',
+            HttpPort: 8888,            
+
+            // Stratum mining endpoint
+            StratumHost: 'soil-us01.daggerpool.com',
+            StratumPort: 8008,
+
+            StratumHost1: 'soil-uk01.daggerpool.com',
+            StratumPort1: 8008,
+            
+            NicehashHost: 'soil-us01.daggerpool.com',
+            NicehashPost: 8088,
+
+            // Fee and payout details
+            PoolFee: '0.5%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'SOILcoin',
+            CoinShortName: 'SOIL',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'soil.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'http://178.62.133.174:9001/#/address/',
+	    TransactionAddress : 'http://178.62.133.174:9001/#/tx/',
+            UncleAddress : 'http://178.62.133.174:9001/#/uncle/',
+            BlockAddress : 'http://178.62.133.174:9001/#/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 15
+
+
+        },
+        ELE: {
+            // API host and port
+            ApiUrl: '//ele.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://ele-us01.daggerpool.com',
+            HttpPort: 7777,            
+
+            // Stratum mining endpoint
+            StratumHost: 'ele-us01.daggerpool.com',
+            StratumPort: 7007,
+
+            StratumHost1: 'ele-uk01.daggerpool.com',
+            StratumPort1: 7007,
+            
+            NicehashHost: 'ele-us01.daggerpool.com',
+            NicehashPost: 7077,
+
+            // Fee and payout details
+            PoolFee: '0.5%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'Elementrem',
+            CoinShortName: 'ELE',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'ele.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'http://www.elementrem.net/address/',
+	    TransactionAddress : 'http://www.elementrem.net/tx/',
+            UncleAddress : 'http://www.elementrem.net/uncle/',
+            BlockAddress : 'http://www.elementrem.net/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 15
+
+
         }
              
 
@@ -269,6 +413,9 @@ module.exports = function (environment) {
         ENV.APP.DBIX.ApiUrl = 'https://dbix.daggerpool.com/'
         ENV.APP.MUSIC.ApiUrl = 'https://music.daggerpool.com/'
         ENV.APP.ETH.ApiUrl = 'https://eth.daggerpool.com/'
+        ENV.APP.ETC.ApiUrl = 'https://etc.daggerpool.com/'
+        ENV.APP.SOIL.ApiUrl = 'https://soil.daggerpool.com/'
+        ENV.APP.ELE.ApiUrl = 'https://ele.daggerpool.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
