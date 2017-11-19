@@ -16,6 +16,7 @@ export default Ember.Route.extend({
         var url_etc = config.APP.ETC.ApiUrl + 'api/stats'; 
         var url_soil = config.APP.SOIL.ApiUrl + 'api/stats'; 
         var url_ele = config.APP.ELE.ApiUrl + 'api/stats'; 
+        var url_pirl = config.APP.PIRL.ApiUrl + 'api/stats'; 
         
       return RSVP.hash({
           model_ubiq:  Ember.$.getJSON(url_ubiq).then(function (data) {
@@ -46,6 +47,10 @@ export default Ember.Route.extend({
         
         }),
          model_ele:Ember.$.getJSON(url_ele).then(function (data) {
+            return Ember.Object.create(data);
+        
+        }),
+         model_pirl:Ember.$.getJSON(url_pirl).then(function (data) {
             return Ember.Object.create(data);
         
         })

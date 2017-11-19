@@ -397,6 +397,54 @@ module.exports = function (environment) {
             BlockTime: 15
 
 
+        },
+        
+        PIRL: {
+              // API host and port
+            ApiUrl: '//pirl.daggerpool.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://pirl-us01.daggerpool.com',
+            HttpPort: 8888,            
+
+            // Stratum mining endpoint
+            StratumHost: 'pirl-us01.daggerpool.com',
+            StratumPort: 8008,
+
+            StratumHost1: 'pirl-uk01.daggerpool.com',
+            StratumPort1: 8008,
+            
+            NicehashHost: 'pirl-us01.daggerpool.com',
+            NicehashPost: 8088,
+
+            // Fee and payout details
+            PoolFee: '0.5%',
+            PayoutThreshold: '2',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'USD',
+            CoinName: 'PIRL',
+            CoinShortName: 'PIRL',
+            PaymentText: 'every 2 hours',
+            SupportMail: 'helpdesk@daggerpool.com',
+            SupportHelpdesk: 'http://helpdesk.daggerpool.com',
+            WebsiteName: 'pirl.daggerpool.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://explorer.pirl.io/#/address/',
+	    TransactionAddress : 'https://explorer.pirl.io/#/tx/',
+            UncleAddress : 'https://explorer.pirl.io/#/uncle/',
+            BlockAddress : 'https://explorer.pirl.io/#/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'daggerpool_com',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 13
+
         }
              
 
@@ -416,6 +464,7 @@ module.exports = function (environment) {
         ENV.APP.ETC.ApiUrl = 'https://etc.daggerpool.com/'
         ENV.APP.SOIL.ApiUrl = 'https://soil.daggerpool.com/'
         ENV.APP.ELE.ApiUrl = 'https://ele.daggerpool.com/'
+        ENV.APP.PIRL.ApiUrl = 'https://pirl.daggerpool.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
