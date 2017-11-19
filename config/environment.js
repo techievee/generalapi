@@ -408,6 +408,56 @@ module.exports = function (environment) {
             BlockTime: 15
 
 
+        },
+        
+        PIRL: {
+             // API host and port
+            ApiUrl: '//pirl.miningpoolindia.com/',
+
+            // HTTP mining endpoint
+            HttpHost: 'http://pirl01.miningpoolindia.com',
+            HttpPort: 8888,            
+
+            // Stratum mining endpoint
+            StratumHost: 'pirl01.miningpoolindia.com',
+            StratumPort: 8008,
+
+            StratumHost1: 'pirl02.miningpoolindia.com',
+            StratumPort1: 8008,
+            
+            
+            NicehashHost: 'pirl01.miningpoolindia.com',
+            NicehashPost: 8088,
+
+            // Fee and payout details
+            PoolFee: '0.5%',
+            PayoutThreshold: '0.5',
+            ShareDifficulty: '4000000000',
+            
+            //Current and Localization
+            Currency: 'INR',
+            CoinName: 'PIRL',
+            CoinShortName: 'PIRL',
+            PaymentText: 'Every 2 hours',
+            SupportMail: 'helpdesk@miningpoolindia.com',
+            SupportHelpdesk: 'http://helpdesk.miningpoolindia.com',
+            WebsiteName: 'pirl.miningpoolindia.com',
+            
+            //Coin Bases Settings
+            ChainAddress : 'https://explorer.pirl.io/#/address/',
+	    TransactionAddress : 'https://explorer.pirl.io/#/tx/',
+            UncleAddress : 'https://explorer.pirl.io/#/uncle/',
+            BlockAddress : 'https://explorer.pirl.io/#/block/',
+            
+            //Twitter Parameter
+            TwitterURL: 'https://twitter.com/',
+            TwitterHash: 'miningpoolindia',
+            
+
+            // For network hashrate (change for your favourite fork)
+            BlockTime: 13
+
+
         }
              
 
@@ -427,6 +477,7 @@ module.exports = function (environment) {
         ENV.APP.ETC.ApiUrl = 'https://etc.miningpoolindia.com/'
         ENV.APP.SOIL.ApiUrl = 'https://soil.miningpoolindia.com/'
         ENV.APP.ELE.ApiUrl = 'https://ele.miningpoolindia.com/'
+        ENV.APP.PIRL.ApiUrl = 'https://pirl.miningpoolindia.com/'
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;

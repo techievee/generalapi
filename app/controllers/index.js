@@ -736,8 +736,101 @@ export default Ember.Controller.extend({
             var epochOffset = (30000 - (this.getWithDefault('height_ele', 1) % 30000)) * 1000 * this.get('config_ele').BlockTime;
             return Date.now() + epochOffset;
         }
-    })
+    }),
    
+   
+   
+   get config_pirl() {
+        return config.APP.PIRL  ;
+    },
+
+    height_pirl: Ember.computed('model.model_pirl.nodes', {
+        get() {
+            var node = this.get('bestNode_pirl');
+            if (node) {
+                return node.height;
+            }
+            return 0;
+        }
+    }),
+
+    roundShares_pirl: Ember.computed('model.model_pirl.stats', {
+        get() {
+            return parseInt(this.get('model.model_pirl.stats.roundShares'));
+        }
+    }),
+    
+    ethinr_pirl: Ember.computed('stats', {
+        get() {
+            return parseFloat(this.get('model.model_pirl.exchangedata.price_inr'));
+        }
+    }),
+    
+     ethusd_pirl: Ember.computed({
+        get() {
+            return parseFloat(this.get('model.model_pirl.exchangedata.price_usd'));
+        }
+    }),
+
+    difficulty_pirl: Ember.computed('model.model_pirl.nodes', {
+        get() {
+            var node = this.get('bestNode_pirl');
+            if (node) {
+                return node.difficulty;
+            }
+            return 0;
+        }
+    }),
+
+    hashrate_pirl: Ember.computed('difficulty_pirl', {
+        get() {
+            return this.getWithDefault('difficulty_pirl', 0) / config.APP.PIRL.BlockTime;
+        }
+    }),
+
+    immatureTotal_pirl: Ember.computed('model.model_pirl', {
+        get() {
+            return this.getWithDefault('model.model_pirl.immatureTotal', 0) + this.getWithDefault('model.model_pirl.candidatesTotal', 0);
+        }
+    }),
+
+    bestNode_pirl: Ember.computed('model.model_pirl.nodes', {
+        get() {
+            var node = null;
+            this.get('model.model_pirl.nodes').forEach(function (n) {
+                if (!node) {
+                    node = n;
+                }
+                if (node.height < n.height) {
+                    node = n;
+                }
+            });
+            return node;
+        }
+    }),
+
+    lastBlockFound_pirl: Ember.computed('model.model_pirl.', {
+        get() {
+            return parseInt(this.get('model.model_pirl.lastBlockFound')) || 0;
+        }
+    }),
+
+    roundVariance_pirl: Ember.computed('model.model_pirl.', {
+        get() {
+            var percent = (this.get('model.model_pirl.stats.roundShares')* 4000000000) / this.get('difficulty');
+            if (!percent) {
+                return 0;
+            }
+            return percent.toFixed(2);
+        }
+    }),
+   
+    nextEpoch_pirl: Ember.computed('height_pirl', {
+        get() {
+            var epochOffset = (30000 - (this.getWithDefault('height_pirl', 1) % 30000)) * 1000 * this.get('config_pirl').BlockTime;
+            return Date.now() + epochOffset;
+        }
+    })
     
     
     
