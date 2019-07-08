@@ -4,6 +4,10 @@ When you run pool with multiple coins, then this frontend consolidates various c
 
 It works in combination with techievee/open-etherem-pool and techievee/statistics-api 
 
+Please use the 
+v1.0_in branch for Indian Version (Currency is displayed as INR)
+v1.0 branch for International Version ( Currency is disaplyed as USD)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
