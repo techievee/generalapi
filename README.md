@@ -1,7 +1,9 @@
-# Pool
+# General Frontend for Open-Ethereum-Pool
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+When you run pool with multiple coins, then this frontend consolidates various coins into single page.
+
+It works in combination with techievee/open-etherem-pol and techievee/statistics-api 
+
 
 ## Prerequisites
 
