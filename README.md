@@ -2,7 +2,7 @@
 
 When you run pool with multiple coins, then this frontend consolidates various coins into single page.
 
-It works in combination with techievee/open-etherem-pol and techievee/statistics-api 
+It works in combination with techievee/open-etherem-pool and techievee/statistics-api 
 
 
 ## Prerequisites
