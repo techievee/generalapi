@@ -1,4 +1,4 @@
-# General Frontend for Open-Ethereum-Pool (International Version)
+# General Frontend for Ethash-mining-Pool (International Version)
 *Refer other branches for Indian Version
 
 When you run pool with multiple coins, then this frontend consolidates various coins into single page.
