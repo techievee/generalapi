@@ -1,12 +1,13 @@
-# General Frontend for Open-Ethereum-Pool (Indian version)
+# General Consolidated Frontend for Ethash-mining-Pool (Indian Version)
+
+*Refer other branches for Indian Version
 
 When you run pool with multiple coins, then this frontend consolidates various coins into single page.
 
-It works in combination with techievee/open-etherem-pool and techievee/statistics-api 
+It works in combination with techievee/ethash-mining-pool and techievee/statistics-api 
 
-Please use the 
-v1.0_in branch for Indian Version (Currency is displayed as INR)
-v1.0 branch for International Version ( Currency is disaplyed as USD)
+This is an ember application, which can be hosted on any simple webserver.
+The application static pages can be placed in any Content delivery network for faster access
 
 ## Prerequisites
 
@@ -18,12 +19,24 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
+### Branches 
+**Please clone the project using the branches as  per the coin
 
-* `git clone <repository-url>` this repository
+* v1.0_in – Indian Version  
+*	v1.0 – International Version
+
+
+
+## Installation 
+
+* `git clone -b <branch> https://github.com/techievee/statistics_api.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+* `sudo chmod +x build.sh`
+* `./build.sh`
+
+Copy the build files to your webserver or to CDN.
 
 ## Running / Development
 
@@ -43,10 +56,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
